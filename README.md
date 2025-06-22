@@ -1,4 +1,4 @@
-# VSCode Folder Creator
+# cfgCreator
 
 一个VSCode扩展，用于在工作区快速创建`.vscode`文件夹和自定义配置文件。
 
