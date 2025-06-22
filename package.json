@@ -1,0 +1,140 @@
+{
+  "name": "vscode-cfg-creator",
+  "displayName": "VSCode Config Files Creator",
+  "description": "快速创建 .vscode 文件夹和配置文件",
+  "version": "1.0.0",
+  "publisher": "congwen",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "vscode",
+    "configuration",
+    "workspace",
+    "setup"
+  ],
+  "activationEvents": [],
+  "main": "./src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.cfgCreator",
+        "title": "cfgCreator: Create .vscode configuration files",
+        "category": "VSCode Creator"
+      }
+    ],
+    "configuration": {
+      "title": "VSCode Creator",
+      "properties": {
+        "cfgCreator.template1": {
+          "type": "object",
+          "default": {
+            "fileName": "settings.json",
+            "content": "{\n  \"editor.fontSize\": 14,\n  \"editor.tabSize\": 2\n}"
+          },
+          "description": "模板1配置",
+          "properties": {
+            "fileName": {
+              "type": "string",
+              "description": "文件名（包含扩展名）"
+            },
+            "content": {
+              "type": "string",
+              "description": "文件内容",
+              "editPresentation": "multilineText"
+            }
+          }
+        },
+        "cfgCreator.template2": {
+          "type": "object",
+          "default": {
+            "fileName": "",
+            "content": ""
+          },
+          "description": "模板2配置",
+          "properties": {
+            "fileName": {
+              "type": "string",
+              "description": "文件名（包含扩展名）"
+            },
+            "content": {
+              "type": "string",
+              "description": "文件内容",
+              "editPresentation": "multilineText"
+            }
+          }
+        },
+        "cfgCreator.template3": {
+          "type": "object",
+          "default": {
+            "fileName": "",
+            "content": ""
+          },
+          "description": "模板3配置",
+          "properties": {
+            "fileName": {
+              "type": "string",
+              "description": "文件名（包含扩展名）"
+            },
+            "content": {
+              "type": "string",
+              "description": "文件内容",
+              "editPresentation": "multilineText"
+            }
+          }
+        },
+        "cfgCreator.template4": {
+          "type": "object",
+          "default": {
+            "fileName": "",
+            "content": ""
+          },
+          "description": "模板4配置",
+          "properties": {
+            "fileName": {
+              "type": "string",
+              "description": "文件名（包含扩展名）"
+            },
+            "content": {
+              "type": "string",
+              "description": "文件内容",
+              "editPresentation": "multilineText"
+            }
+          }
+        },
+        "cfgCreator.template5": {
+          "type": "object",
+          "default": {
+            "fileName": "",
+            "content": ""
+          },
+          "description": "模板5配置",
+          "properties": {
+            "fileName": {
+              "type": "string",
+              "description": "文件名（包含扩展名）"
+            },
+            "content": {
+              "type": "string",
+              "description": "文件内容",
+              "editPresentation": "multilineText"
+            }
+          }
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "18.x",
+    "@types/vscode": "^1.74.0",
+    "typescript": "^4.9.4"
+  }
+}
